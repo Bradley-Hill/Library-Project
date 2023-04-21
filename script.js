@@ -1,4 +1,9 @@
-let grandLibrary = []
+let grandLibrary = [{
+    author: 'Joe Abercrombie',
+    title:'The Heroes',
+    pages: 289,
+    publishDate: 2011, 
+    haveRead:true}]
 
 function Book(author,title,pages,publishDate,haveRead){
     this.author = author;
@@ -15,4 +20,3 @@ function addBookToLibrary(author,title,pages,publishDate,haveRead){
     console.log(grandLibrary)
 }
 
-console.log(grandLibrary)
