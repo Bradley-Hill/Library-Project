@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;600;700&family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  font-family: "Anuphan", sans-serif;
+  border: 0;
+  padding: 0;
+}
+
+div {
+  font-family: "Darker Grotesque", sans-serif;
+  border: 1px solid black;
+  height: 500px;
+}
