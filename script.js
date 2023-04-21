@@ -1,15 +1,18 @@
 let grandLibrary = []
 
-function Book(author,title,pages,publishDate,status){
+function Book(author,title,pages,publishDate,haveRead){
     this.author = author;
     this.title = title;
     this.pages = pages;
     this.publishDate = publishDate;
-    this.status = status;
+    this.haveRead = haveRead;
 }
 
-function addBookToLibrary(author,title,pages,publishDate,status){
+function addBookToLibrary(author,title,pages,publishDate,haveRead){
     let book = Object.create(Book.prototype);
-    Book.call(book,author,title,pages,publishDate,status);
+    Book.call(book,author,title,pages,publishDate,haveRead);
     grandLibrary.push(book);
+    console.log(grandLibrary)
 }
+
+console.log(grandLibrary)
