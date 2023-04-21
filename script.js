@@ -17,6 +17,6 @@ function addBookToLibrary(author,title,pages,publishDate,haveRead){
     let book = Object.create(Book.prototype);
     Book.call(book,author,title,pages,publishDate,haveRead);
     grandLibrary.push(book);
-    console.log(grandLibrary)
 }
 
+console.log(grandLibrary)
