@@ -64,6 +64,7 @@ function Book(author, title, pages, publishDate, haveRead) {
 function addBookToLibrary(book) {
     grandLibrary.push(book);
     updateLibraryDisplay();
+    hideForm();
 }
 
 function submitForm(event) {
@@ -71,11 +72,16 @@ function submitForm(event) {
     const author = document.getElementById('author-input').value;
     const title = document.getElementById('title-input').value;
     const pages = document.getElementById('pages-input').value;
-    const publishDate = document.getElementById('publish-date-input').value;
-    const haveRead = document.getElementById('have-read-input').checked;
+    const publishDate = document.getElementById('publishDate-input').value;
+    const haveRead = document.getElementById('haveRead-input').checked;
     const book = new Book(author, title, pages, publishDate, haveRead);
     addBookToLibrary(book);
     hideForm();
+    document.getElementById('author-input').value = '';
+  document.getElementById('title-input').value = '';
+  document.getElementById('pages-input').value = '';
+  document.getElementById('publishDate-input').value = '';
+  document.getElementById('haveRead-input').selectedIndex = 0;
 }
 
 function showForm(){
@@ -96,6 +102,11 @@ submitButton.onclick = function (event) {
 
 cancelButton.onclick = function(){ 
     hideForm();
+  document.getElementById('author-input').value = '';
+  document.getElementById('title-input').value = '';
+  document.getElementById('pages-input').value = '';
+  document.getElementById('publishDate-input').value = '';
+  document.getElementById('haveRead-input').selectedIndex = 0;
 };
 
 updateLibraryDisplay()
