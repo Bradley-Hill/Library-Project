@@ -26,7 +26,7 @@ div {
   height: 500px;
 }
 
-button {
+#add-entry {
   padding: 12px 24px;
   border: none;
   border-radius: 50px;
@@ -40,6 +40,55 @@ button {
   transition: 0.5s ease;
 }
 
-button:hover {
+#add-entry:hover {
   transform: rotate(180deg);
+}
+
+/* .hidden {
+  display: none;
+} */
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  justify-self: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+button[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #90cdf4;
+}
+
+button[type="submit"]:active {
+  background-color: #0062cc;
+  transform: translateY(1px);
 }
