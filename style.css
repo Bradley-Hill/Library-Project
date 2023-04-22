@@ -23,4 +23,9 @@ button {
   font-size: 2rem;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  transform: rotate(180deg);
 }
