@@ -92,3 +92,7 @@ button[type="submit"]:active {
   background-color: #0062cc;
   transform: translateY(1px);
 }
+
+.library-card {
+  background-color: #0074d9;
+}

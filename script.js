@@ -13,8 +13,11 @@ let grandLibrary = [{
     haveRead: false
 }]
 
-const gridContainer = document.getElementById('grid-container')
+const gridContainer = document.getElementById('grid-container');
 const addBookButton = document.getElementById('add-entry');
+const formContainer = document.getElementById('book-form');
+const submitButton = document.getElementById('submit-button');
+const cancelButton = document.getElementById('cancel-button');
 
 //for loop populating the grid with books
 function updateLibraryDisplay() {
@@ -58,16 +61,42 @@ function Book(author, title, pages, publishDate, haveRead) {
     this.haveRead = haveRead;
 }
 
-function addBookToLibrary(author, title, pages, publishDate, haveRead) {
-    grandLibrary.push(new Book(author, title, pages, publishDate, haveRead));
+function addBookToLibrary(book) {
+    grandLibrary.push(book);
     updateLibraryDisplay();
 }
 
+function submitForm(event) {
+    event.preventDefault();
+    const author = document.getElementById('author-input').value;
+    const title = document.getElementById('title-input').value;
+    const pages = document.getElementById('pages-input').value;
+    const publishDate = document.getElementById('publish-date-input').value;
+    const haveRead = document.getElementById('have-read-input').checked;
+    const book = new Book(author, title, pages, publishDate, haveRead);
+    addBookToLibrary(book);
+    hideForm();
+}
+
+function showForm(){
+    formContainer.style.display = 'block';
+}
+
+function hideForm(){
+    formContainer.style.display = 'none'
+}
 
 addBookButton.onclick = function () {
-    addBookToLibrary('Nicholas Eames', 'Kings of the Wyld', 422, 2017, true);
-    updateLibraryDisplay()
+    showForm();
 }
+
+submitButton.onclick = function (event) {
+    submitForm(event);
+}
+
+cancelButton.onclick = function(){ 
+    hideForm();
+};
 
 updateLibraryDisplay()
 console.log(grandLibrary)
