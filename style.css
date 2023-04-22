@@ -6,6 +6,20 @@
   padding: 0;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
 div {
   font-family: "Darker Grotesque", sans-serif;
   border: 1px solid black;
