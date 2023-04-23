@@ -78,10 +78,10 @@ function submitForm(event) {
     addBookToLibrary(book);
     hideForm();
     document.getElementById('author-input').value = '';
-  document.getElementById('title-input').value = '';
-  document.getElementById('pages-input').value = '';
-  document.getElementById('publishDate-input').value = '';
-  document.getElementById('haveRead-input').selectedIndex = 0;
+    document.getElementById('title-input').value = '';
+    document.getElementById('pages-input').value = '';
+    document.getElementById('publishDate-input').value = '';
+    document.getElementById('haveRead-input').selectedIndex = 0;
 }
 
 function showForm(){
