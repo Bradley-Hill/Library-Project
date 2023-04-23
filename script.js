@@ -71,6 +71,12 @@ function Book(author, title, pages, publishDate, haveRead) {
 }
 
 function addBookToLibrary(book) {
+    for(let i = 0; i< grandLibrary.length; i++){
+        if(grandLibrary[i].author == book.author && grandLibrary[i].title == book.title){
+            alert('Book already exists in library!');
+            return;
+        }
+    }
     grandLibrary.push(book);
     updateLibraryDisplay();
     hideForm();
