@@ -19,18 +19,19 @@ const formContainer = document.getElementById('book-form');
 const submitButton = document.getElementById('submit-button');
 const cancelButton = document.getElementById('cancel-button');
 
-//for loop populating the grid with books
+//for loop populating the grid with books in grandLibrary array
 function updateLibraryDisplay() {
     gridContainer.innerHTML = '';
     for (let i = 0; i < grandLibrary.length; i++) {
         const book = grandLibrary[i];
         const card = document.createElement('div');
         card.classList.add('library-card');
+        card.setAttribute('data-index', i)
 
-        const title = document.createElement('h2');
+        const title = document.createElement('h1');
         title.textContent = book.title;
 
-        const author = document.createElement('p');
+        const author = document.createElement('h3');
         author.textContent = book.author;
 
         const pages = document.createElement('p');
@@ -42,11 +43,19 @@ function updateLibraryDisplay() {
         const haveRead = document.createElement('p');
         haveRead.textContent = book.haveRead ? 'Read' : 'Not read';
 
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove?';
+        removeBtn.addEventListener('click', () => {
+            grandLibrary.splice(i,1);
+            updateLibraryDisplay();
+        })
+
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(pages);
         card.appendChild(publishDate);
         card.appendChild(haveRead);
+        card.appendChild(removeBtn)
 
         gridContainer.appendChild(card);
     }
@@ -75,6 +84,8 @@ function submitForm(event) {
     const publishDate = document.getElementById('publishDate-input').value;
     const haveRead = document.getElementById('haveRead-input').checked;
     const book = new Book(author, title, pages, publishDate, haveRead);
+    const index = grandLibrary.indexOf(book);
+    const card = 
     addBookToLibrary(book);
     hideForm();
     document.getElementById('author-input').value = '';
