@@ -15,7 +15,6 @@
 #grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(50px, auto);
 }
@@ -33,6 +32,7 @@ div .library-card {
   border-radius: 40px;
   margin: 1rem;
   background-color: #0074d9;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 #add-entry {
