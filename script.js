@@ -84,11 +84,11 @@ function submitForm(event) {
     document.getElementById('haveRead-input').selectedIndex = 0;
 }
 
-function showForm(){
+function showForm() {
     formContainer.style.display = 'block';
 }
 
-function hideForm(){
+function hideForm() {
     formContainer.style.display = 'none'
 }
 
@@ -100,13 +100,13 @@ submitButton.onclick = function (event) {
     submitForm(event);
 }
 
-cancelButton.onclick = function(){ 
+cancelButton.onclick = function () {
     hideForm();
-  document.getElementById('author-input').value = '';
-  document.getElementById('title-input').value = '';
-  document.getElementById('pages-input').value = '';
-  document.getElementById('publishDate-input').value = '';
-  document.getElementById('haveRead-input').selectedIndex = 0;
+    document.getElementById('author-input').value = '';
+    document.getElementById('title-input').value = '';
+    document.getElementById('pages-input').value = '';
+    document.getElementById('publishDate-input').value = '';
+    document.getElementById('haveRead-input').selectedIndex = 0;
 };
 
 updateLibraryDisplay()

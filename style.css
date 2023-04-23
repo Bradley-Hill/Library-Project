@@ -23,7 +23,13 @@
 div {
   font-family: "Darker Grotesque", sans-serif;
   border: 1px solid black;
-  height: 500px;
+}
+
+div .library-card {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Anuphan", sans-serif;
+  height: 300px;
 }
 
 #add-entry {
