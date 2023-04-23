@@ -106,6 +106,11 @@ function hideForm() {
     formContainer.style.display = 'none'
 }
 
+function toggleHaveRead(index){
+    grandLibrary[index].haveRead = !grandLibrary[index].haveRead;
+    updateLibraryDisplay();
+}
+
 addBookButton.onclick = function () {
     showForm();
 }
