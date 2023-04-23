@@ -44,11 +44,12 @@ function updateLibraryDisplay() {
         haveRead.textContent = book.haveRead ? 'Read' : 'Not read';
 
         const toggleReadBtn = document.createElement('button');
-        toggleReadBtn.textContent.textContent = 'Toggle Read';
+        toggleReadBtn.classList.add('switch');
+        toggleReadBtn.textContent = 'Toggle Read';
         toggleReadBtn.addEventListener('click', () => {
-            const index = card.dataset.index;
-            toggleHaveReadBtn(index);
-        })
+        const index = card.dataset.index;
+        toggleHaveRead(index);
+    });
 
         const removeBtn = document.createElement('button');
         removeBtn.textContent = 'Remove?';
@@ -63,7 +64,8 @@ function updateLibraryDisplay() {
         card.appendChild(pages);
         card.appendChild(publishDate);
         card.appendChild(haveRead);
-        card.appendChild(removeBtn)
+        card.appendChild(removeBtn);
+        card.appendChild(toggleReadBtn);
 
         gridContainer.appendChild(card);
     }
