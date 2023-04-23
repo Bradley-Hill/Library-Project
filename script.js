@@ -84,8 +84,6 @@ function submitForm(event) {
     const publishDate = document.getElementById('publishDate-input').value;
     const haveRead = document.getElementById('haveRead-input').checked;
     const book = new Book(author, title, pages, publishDate, haveRead);
-    const index = grandLibrary.indexOf(book);
-    const card = 
     addBookToLibrary(book);
     hideForm();
     document.getElementById('author-input').value = '';
