@@ -110,4 +110,3 @@ cancelButton.onclick = function(){
 };
 
 updateLibraryDisplay()
-console.log(grandLibrary)
