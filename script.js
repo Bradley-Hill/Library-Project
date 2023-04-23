@@ -26,7 +26,7 @@ function updateLibraryDisplay() {
         const book = grandLibrary[i];
         const card = document.createElement('div');
         card.classList.add('library-card');
-        card.setAttribute('data-index', i)
+        card.dataset.index = i;
 
         const title = document.createElement('h1');
         title.textContent = book.title;
@@ -46,7 +46,8 @@ function updateLibraryDisplay() {
         const removeBtn = document.createElement('button');
         removeBtn.textContent = 'Remove?';
         removeBtn.addEventListener('click', () => {
-            grandLibrary.splice(i,1);
+            const index = card.dataset.index;
+            grandLibrary.splice(index,1);
             updateLibraryDisplay();
         })
 
