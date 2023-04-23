@@ -59,14 +59,30 @@ function updateLibraryDisplay() {
             updateLibraryDisplay();
         })
 
+        const switchLabel = document.createElement('label');
+        switchLabel.classList.add('switch');
+        switchLabel.innerHTML = `
+            <input type="checkbox" class="haveRead-switch">
+            <span class="slider"></span>
+        `;
+
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(pages);
         card.appendChild(publishDate);
         card.appendChild(haveRead);
+        card.appendChild(switchLabel);
         card.appendChild(removeBtn);
         card.appendChild(toggleReadBtn);
-
+        libraryCards.forEach(card => {
+            const switchLabel = document.createElement('label');
+            switchLabel.classList.add('switch');
+            switchLabel.innerHTML = `
+                <input type="checkbox" class="haveRead-switch">
+                <span class="slider"></span>
+            `;
+            card.appendChild(switchLabel);
+        });
         gridContainer.appendChild(card);
     }
 }

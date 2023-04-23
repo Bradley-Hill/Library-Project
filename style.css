@@ -102,3 +102,10 @@ button[type="submit"]:active {
   background-color: #0062cc;
   transform: translateY(1px);
 }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+}
