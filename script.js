@@ -43,6 +43,13 @@ function updateLibraryDisplay() {
         const haveRead = document.createElement('p');
         haveRead.textContent = book.haveRead ? 'Read' : 'Not read';
 
+        const toggleReadBtn = document.createElement('button');
+        toggleReadBtn.textContent.textContent = 'Toggle Read';
+        toggleReadBtn.addEventListener('click', () => {
+            const index = card.dataset.index;
+            toggleHaveReadBtn(index);
+        })
+
         const removeBtn = document.createElement('button');
         removeBtn.textContent = 'Remove?';
         removeBtn.addEventListener('click', () => {
