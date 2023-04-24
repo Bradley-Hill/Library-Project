@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  background-color: #c1e2ff;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
