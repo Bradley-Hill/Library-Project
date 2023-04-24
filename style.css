@@ -9,7 +9,7 @@
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: center;
 }
 
 #grid-container {
@@ -103,22 +103,22 @@ button[type="submit"]:active {
   transform: translateY(1px);
 }
 
-button .switch {
+button.switch {
   background-color: #4caf50; /* Normal state background color */
   color: white; /* Normal state font color */
   border: none; /* Normal state border */
   padding: 10px 20px; /* Button padding */
 }
 
-button .switch:hover {
+button.switch:hover {
   background-color: #3e8e41; /* Hover state background color */
 }
 
-button .switch:active {
+button.switch:active {
   background-color: #1e5111; /* Active state background color */
 }
 
-button .switch:focus {
+button.switch:focus {
   outline: none; /* Remove focus outline */
   border: 2px solid #1e5111; /* Focus state border color */
 }
