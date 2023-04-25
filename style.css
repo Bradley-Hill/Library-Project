@@ -10,6 +10,11 @@ html {
   background-color: #f7f5cf;
 }
 
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
 .form-container {
   display: flex;
   flex-direction: row;
@@ -24,9 +29,13 @@ html {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: end;
+  font-weight: bold;
 }
 
 div {

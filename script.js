@@ -9,6 +9,90 @@ let grandLibrary = [{
     author: 'Terry Pratchett',
     title: 'Thud!',
     pages: 268,
+    publishDate: 2007,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchet',
+    title: 'Thud!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thudey!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thude!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thudl!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Tery Pratchett',
+    title: 'Thudston!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thudle!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thuding!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thudet!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thudder!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thuded!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Terry Pratchett',
+    title: 'Thudd!',
+    pages: 268,
+    publishDate: 2005,
+    haveRead: false
+},
+{
+    author: 'Tery Pratchet',
+    title: 'Thud!',
+    pages: 268,
     publishDate: 2005,
     haveRead: false
 }]
