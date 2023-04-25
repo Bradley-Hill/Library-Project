@@ -8,3 +8,5 @@ Added JS constructor for the books objects and functionality for displaying the 
 
 Added the button to toggle the Read property of the cards another to remove the entry, and a check to verify no duplicate books are added to the library.
 Also added styles for the cards and buttons. - 23/04/2023
+
+Finished styling and designing the library features and form. 25/04/2023
