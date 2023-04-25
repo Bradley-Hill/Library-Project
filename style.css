@@ -10,7 +10,7 @@ html {
   background-color: #f7f5cf;
 }
 
-.footer {
+.form-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,6 +21,12 @@ html {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(50px, auto);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 div {
@@ -132,4 +138,9 @@ button:active {
 button:focus {
   outline: none;
   border: 2px solid #1e5111;
+}
+
+button.remove:hover {
+  background-color: red;
+  text-decoration: underline;
 }

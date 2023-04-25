@@ -52,6 +52,7 @@ function updateLibraryDisplay() {
     });
 
         const removeBtn = document.createElement('button');
+        removeBtn.classList.add('remove');
         removeBtn.textContent = 'Remove?';
         removeBtn.addEventListener('click', () => {
             const index = card.dataset.index;
