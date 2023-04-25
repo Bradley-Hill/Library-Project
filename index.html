@@ -8,41 +8,37 @@
     <title>Library Project</title>
   </head>
   <body>
-    <section class="header">
-      <form id="book-form" class="hidden">
-        <label for="author-input">Author:</label>
-        <input type="text" id="author-input" required pattern="^A-Z" />
-
-        <label for="title-input">Title:</label>
-        <input type="text" id="title-input" required pattern="^A-Z" />
-
-        <label for="pages-input">Pages:</label>
-        <input type="number" id="pages-input" required pattern="^\d{2,4}$" />
-
-        <label for="publishDate-input">Publish Year:</label>
-        <input
-          type="number"
-          id="publishDate-input"
-          required
-          pattern="^\d{4}$"
-        />
-
-        <label for="haveRead-input">Have Read:</label>
-        <select id="haveRead-input" required>
-          <option value=""></option>
-          <option value="true">Yes</option>
-          <option value="false">No</option>
-        </select>
-
-        <button id="submit-button" type="submit">Add Book</button>
-        <button id="cancel-button" type="submit">Cancel</button>
-      </form>
-    </section>
+    <section class="header"></section>
     <section class="main">
       <div id="grid-container"></div>
     </section>
     <section class="footer">
       <div><button id="add-entry">+</button></div>
+      <div class="form">
+        <form id="book-form" class="hidden">
+          <label for="author-input">Author:</label>
+          <input type="text" id="author-input" required pattern="^A-Z" />
+          <label for="title-input">Title:</label>
+          <input type="text" id="title-input" required pattern="^A-Z" />
+          <label for="pages-input">Pages:</label>
+          <input type="number" id="pages-input" required pattern="^\d{2,4}$" />
+          <label for="publishDate-input">Publish Year:</label>
+          <input
+            type="number"
+            id="publishDate-input"
+            required
+            pattern="^\d{4}$"
+          />
+          <label for="haveRead-input">Have Read:</label>
+          <select id="haveRead-input" required>
+            <option value=""></option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+          <button id="submit-button" type="submit">Add Book</button>
+          <button id="cancel-button" type="submit">Cancel</button>
+        </form>
+      </div>
     </section>
   </body>
   <script src="script.js"></script>
