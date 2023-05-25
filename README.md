@@ -10,3 +10,5 @@ Added the button to toggle the Read property of the cards another to remove the 
 Also added styles for the cards and buttons. - 23/04/2023
 
 Finished styling and designing the library features and form. - 25/04/2023
+
+Started re-factoring to use Class keyword for the book objects - 25/05/2023
