@@ -19,8 +19,6 @@ const formContainer = document.getElementById('book-form');
 const submitButton = document.getElementById('submit-button');
 const cancelButton = document.getElementById('cancel-button');
 
-addBookButton.addEventListener('click',showForm);
-
 
 //Class for book objects.
 class Book {
@@ -30,23 +28,24 @@ class Book {
         this.pages = pages;
         this.publishDate = publishDate;
         this.haveRead = haveRead;
+    }
+}
 
-        toggleHaveRead(index){
+function toggleHaveRead(index) {
     grandLibrary[index].haveRead = !grandLibrary[index].haveRead;
     updateLibraryDisplay();
-}
-    }
 }
 
 function submitForm(event) {
     event.preventDefault();
+    console.log('submitForm');
     const author = document.getElementById('author-input').value;
     const title = document.getElementById('title-input').value;
     const pages = document.getElementById('pages-input').value;
     const publishDate = document.getElementById('publishDate-input').value;
     const haveRead = document.getElementById('haveRead-input').checked;
     const book = new Book(author, title, pages, publishDate, haveRead);
-    book.addBookToLibrary(book);
+    addBookToLibrary(book);
     hideForm();
     document.getElementById('author-input').value = '';
     document.getElementById('title-input').value = '';
@@ -56,6 +55,7 @@ function submitForm(event) {
 }
 
 function showForm() {
+    console.log('Clicked');
     formContainer.style.display = 'block';
 }
 
