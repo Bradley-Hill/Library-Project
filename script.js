@@ -19,7 +19,7 @@ const formContainer = document.getElementById('book-form');
 const submitButton = document.getElementById('submit-button');
 const cancelButton = document.getElementById('cancel-button');
 
-addBookButton.addEventListener('click',showForm());
+addBookButton.addEventListener('click',showForm);
 
 
 //Class for book objects.
